@@ -14,7 +14,7 @@ class Viewer {
     boolean hasChanges = false;
     private printDocument PD = new printDocument();
 
-        Viewer(){
+    Viewer(){
         Controller controller = new Controller (this);
         JFrame frame = new JFrame("Notepad-- All Right reserved by Banderas © Copyright 1888-2019");
         textArea = new JTextArea();
@@ -256,21 +256,21 @@ class Viewer {
 
     public void saveFile() { // Save opened file
 
-            try{
-                FileWriter fw = new FileWriter(file);
-                fw.write(sendText().toString());
-                fw.close();
+        try{
+            FileWriter fw = new FileWriter(file);
+            fw.write(sendText().toString());
+            fw.close();
 
-            }catch(IOException e){
-                // Окно с ошибкой доступа к файлу (not work)
-                saveAsFile();
-                System.out.println("Error");
+        }catch(IOException e){
+            // Окно с ошибкой доступа к файлу (not work)
+            saveAsFile();
+            System.out.println("Error");
 
-            }catch(NullPointerException e){
-                // Save new document
-                saveAsFile();
-                System.out.println("Error");
-            }
+        }catch(NullPointerException e){
+            // Save new document
+            saveAsFile();
+            System.out.println("Error");
+        }
 
     }
 
@@ -299,14 +299,12 @@ class Viewer {
 
         /*
         try{
-
             boolean complite = textArea.print();
             if(complite){
                 JOptionPane.showMessageDialog(null, "Done printing", "Information", JOptionPane.INFORMATION_MESSAGE);
             } else{
                 JOptionPane.showMessageDialog(null, "Printing", "Printer", JOptionPane.ERROR_MESSAGE);
             }
-
         }catch(PrinterException e){
             JOptionPane.showMessageDialog(null, e);
         }*/

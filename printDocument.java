@@ -48,7 +48,7 @@ public class printDocument implements Printable {
     }
 
 
-    public void startPrint(){
+    public void startPrint(){//test
         printDocument ob = new printDocument();
 
         ob.doAction();
