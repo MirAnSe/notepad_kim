@@ -9,7 +9,6 @@ import java.awt.print.PrinterException;
 import java.io.*;
 
 class Viewer {
-
     JTextArea textArea;
     boolean hasChanges = false;
     private printDocument PD = new printDocument();
