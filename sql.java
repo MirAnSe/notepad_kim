@@ -10,7 +10,7 @@ class sql {
         try{
             System.out.println("Start Connect");
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/test?autoRecconect=true&useSSL=false","root","root");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/employees?autoRecconect=true&useSSL=false","root","root");
             System.out.println("Connect ok");
         }catch (ClassNotFoundException cne){
             System.out.println("Error EXEPTION: "+cne);
